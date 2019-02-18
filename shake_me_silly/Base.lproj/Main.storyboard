@@ -48,6 +48,9 @@
                                 <state key="normal" title="Start Game">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="startGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QeR-Id-4J4"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="tNs-6c-jAt">
                                 <rect key="frame" x="16" y="154" width="343" height="65"/>
@@ -87,6 +90,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="VMn-qa-UlP" id="AJu-sW-IOi"/>
+                        <outlet property="scoreLabel" destination="mO4-cf-D8u" id="c3J-Gr-EP8"/>
+                        <outlet property="startGameButton" destination="cDo-r8-ycz" id="c3c-hd-GfD"/>
+                        <outlet property="timeLabel" destination="tNs-6c-jAt" id="bHu-My-Sww"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

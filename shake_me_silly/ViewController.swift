@@ -10,11 +10,26 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var startGameButton: UIButton!
+    @IBOutlet weak var imageView: UIImageView!
+    
+    var timer = Timer()
+    
+    var timeInt = 10
+    var scoreInt = 0
+    
+    var imageInt = 1
+    var modeInt = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
+    @IBAction func startGame(_ sender: Any) {
+    }
+    
 }
 
