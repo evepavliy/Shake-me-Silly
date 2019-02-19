@@ -31,6 +31,8 @@ class ViewController: UIViewController {
     @IBAction func startGame(_ sender: Any) {
         
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(startCounter), userInfo: nil, repeats: true )
+        
+          modeInt = 1
     
     }
     
@@ -38,10 +40,12 @@ class ViewController: UIViewController {
         
         timeInt -= 1
         timeLabel.text = String(timeInt)
+      
         
         if timeInt == 0 {
             
             timer.invalidate()
+            modeInt = 0
             
         }
         
@@ -56,8 +60,12 @@ class ViewController: UIViewController {
         
         if motion == .motionShake{
             
-            scoreInt += 1
-            scoreLabel.text = String(scoreInt)
+            if modeInt == 1 {
+                
+                scoreInt += 1
+                scoreLabel.text = String(scoreInt)
+                
+            }
             
         }
         
