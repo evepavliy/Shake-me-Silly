@@ -38,6 +38,22 @@ class ViewController: UIViewController {
             
             startGameButton.isEnabled = false
             startGameButton.alpha = 0.5
+            startGameButton.setTitle("Shake Me ", for: UIControl.State.normal)
+            
+        }
+        
+        if timeInt == 0 {
+            
+            startGameButton.isEnabled = true
+            startGameButton.alpha = 1
+            startGameButton.setTitle("Start Game", for: UIControl.State.normal)
+            timeInt = 10
+            scoreInt = 0
+            timeLabel.text = String(timeInt)
+            scoreLabel.text = String(scoreInt)
+            imageView.image = UIImage(named: "Face1")
+            
+            
         }
     
     }
@@ -55,6 +71,8 @@ class ViewController: UIViewController {
             
             startGameButton.isEnabled = true
             startGameButton.alpha = 1
+            
+            startGameButton.setTitle("Restart Game", for: UIControl.State.normal)
             
         }
         
