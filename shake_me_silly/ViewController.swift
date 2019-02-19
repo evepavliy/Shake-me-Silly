@@ -30,9 +30,15 @@ class ViewController: UIViewController {
 
     @IBAction func startGame(_ sender: Any) {
         
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(startCounter), userInfo: nil, repeats: true )
-        
-          modeInt = 1
+        if timeInt == 10 {
+            
+            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(startCounter), userInfo: nil, repeats: true )
+            
+            modeInt = 1
+            
+            startGameButton.isEnabled = false
+            startGameButton.alpha = 0.5
+        }
     
     }
     
