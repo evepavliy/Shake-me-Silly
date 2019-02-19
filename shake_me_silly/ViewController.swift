@@ -64,6 +64,15 @@ class ViewController: UIViewController {
                 
                 scoreInt += 1
                 scoreLabel.text = String(scoreInt)
+                imageInt += 1
+                
+                if imageInt == 13 {    //as we have only 12 images
+                   
+                    imageInt = 1
+                    
+                }
+                
+                imageView.image = UIImage(named: "Face\(imageInt)")
                 
             }
             
