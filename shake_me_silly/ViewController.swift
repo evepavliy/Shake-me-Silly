@@ -53,6 +53,9 @@ class ViewController: UIViewController {
             timer.invalidate()
             modeInt = 0
             
+            startGameButton.isEnabled = true
+            startGameButton.alpha = 1
+            
         }
         
     }
