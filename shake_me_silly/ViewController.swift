@@ -39,6 +39,27 @@ class ViewController: UIViewController {
         timeInt -= 1
         timeLabel.text = String(timeInt)
         
+        if timeInt == 0 {
+            
+            timer.invalidate()
+            
+        }
+        
+    }
+    
+    override func becomeFirstResponder() -> Bool {
+      
+        return true
+    }
+    
+    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        
+        if motion == .motionShake{
+            
+            scoreInt += 1
+            scoreLabel.text = String(scoreInt)
+            
+        }
         
     }
     
